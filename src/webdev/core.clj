@@ -14,10 +14,16 @@
    :body "Tataaa!"
    :headers{}})
 
+(defn floffy [req]
+  {:status 200
+   :body "Oh my, you found it!  Piggy Love Floffy, you know?! X x x X"
+   :headers {}})
+
 (defroutes app
   (GET "/" [] greet)
   (GET "/goodbye" [] goodbye)
-  (not-found "Page not found."))
+  (GET "/floffy" [] floffy)
+  (not-found "Hmmm.... nothing here.  Maybe you can try something more special...!"))
 
 
 (defn -main [port]
