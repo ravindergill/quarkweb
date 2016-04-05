@@ -1,10 +1,12 @@
 # webdev
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library designed explore purelyfuntional.tv clojure web course.
 
 ## Usage
 
-FIXME
+Host on Heroku:
+
+http://quarkweb.herokuapp.com
 
 ## License
 
