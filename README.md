@@ -9,12 +9,12 @@ Host on Heroku:
 http://quarkweb.herokuapp.com
 
 Other uris:
-  /about
-  /goodbye
-  /request
-  /yo/{name}
-  /calc/{integer}/{operator}/{integer}
-  /{mystery}
+* /about
+*  /goodbye
+*  /request
+*  /yo/{name}
+*  /calc/{integer}/{operator}/{integer}
+*  /{mystery}
 
 ## License
 
