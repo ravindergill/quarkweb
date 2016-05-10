@@ -16,17 +16,19 @@
 
 (def props (read-properties "resources/webdev.properties"))
 
-(let [db-host (props :db-host)
-      db-port (props :db-port)
-      db-name (props :db-name)])
-
-(def db (or
-            (System/getenv "DATABASE_URL")
-            {:classname "org.postgresql.Driver"
+(def local-db
+ (let [db-host (props :db-host)
+       db-port (props :db-port)
+       db-name (props :db-name)]
+  {:classname "org.postgresql.Driver"
              :subprotocol "postgresql"
              :subname (str "//" db-host ":" db-port "/" db-name)
              :user (props :db-user)
              :password (props :db-password)}))
+
+(def db (or
+            (System/getenv "DATABASE_URL")
+            local-db))
 
 (defn greet [req]
   {:status 200
