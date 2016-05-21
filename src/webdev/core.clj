@@ -21,10 +21,10 @@
        db-port (props :db-port)
        db-name (props :db-name)]
   {:classname "org.postgresql.Driver"
-             :subprotocol "postgresql"
-             :subname (str "//" db-host ":" db-port "/" db-name)
-             :user (props :db-user)
-             :password (props :db-password)}))
+   :subprotocol "postgresql"
+   :subname (str "//" db-host ":" db-port "/" db-name)
+   :user (props :db-user)
+   :password (props :db-password)}))
 
 (def db (or
             (System/getenv "DATABASE_URL")
